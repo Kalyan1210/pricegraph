@@ -1,0 +1,420 @@
+[
+  {
+    "id": "fd9b3784b9404a68b16f8b0f18b55b78-18bb9d",
+    "status": "reused",
+    "parser": "json-f2941acb08",
+    "fingerprint": "json-d73e5828c0",
+    "kind": "json"
+  },
+  {
+    "id": "75-6000439-jps-health-network-standardcharges-csv-19558b",
+    "status": "reused",
+    "parser": "csv-tall-84ac1fc291",
+    "fingerprint": "csv-tall-6517fb7910",
+    "kind": "csv-tall"
+  },
+  {
+    "id": "750800661-methodistcharltonmedicalcenter-standardcharges-zip-489127",
+    "status": "fetch_failed",
+    "detail": "Client error '404 Not Found' for url 'https://www.methodisthealthsystem.org/sites/default/files/Price%20Transparency/750800661_MethodistCharltonMedicalCenter_standardcharges.zip'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404"
+  },
+  {
+    "id": "46-4027347-medical-city-alliance-standardcharges-json-ee7a00",
+    "status": "reused",
+    "parser": "json-f2941acb08",
+    "fingerprint": "json-a00d4716a3",
+    "kind": "json"
+  },
+  {
+    "id": "46-4027347-medical-city-mental-health-and-wellness-center-al-8ecfe6",
+    "status": "reused",
+    "parser": "json-f2941acb08",
+    "fingerprint": "json-7e0ed82a1d",
+    "kind": "json"
+  },
+  {
+    "id": "46-4027347-medical-city-surgery-city-alliance-standardcharge-eb0b6f",
+    "status": "reused",
+    "parser": "json-f2941acb08",
+    "fingerprint": "json-630663d9a4",
+    "kind": "json"
+  },
+  {
+    "id": "62-1650582-medical-city-las-colinas-standardcharges-json-0c2648",
+    "status": "reused",
+    "parser": "json-f2941acb08",
+    "fingerprint": "json-d7e1ed2d6a",
+    "kind": "json"
+  },
+  {
+    "id": "62-1682198-med-city-heart-hospital-standardcharges-json-a59087",
+    "status": "reused",
+    "parser": "json-f2941acb08",
+    "fingerprint": "json-6ef3203fc5",
+    "kind": "json"
+  },
+  {
+    "id": "62-1682198-med-city-spine-hospital-standardcharges-json-fc0bcc",
+    "status": "reused",
+    "parser": "json-f2941acb08",
+    "fingerprint": "json-6ef3203fc5",
+    "kind": "json"
+  },
+  {
+    "id": "62-1682198-medical-city-dallas-standardcharges-json-dca9c8",
+    "status": "reused",
+    "parser": "json-f2941acb08",
+    "fingerprint": "json-a00d4716a3",
+    "kind": "json"
+  },
+  {
+    "id": "62-1682201-medical-city-arlington-standardcharges-json-d9bf63",
+    "status": "reused",
+    "parser": "json-f2941acb08",
+    "fingerprint": "json-a00d4716a3",
+    "kind": "json"
+  },
+  {
+    "id": "62-1682202-medical-city-fort-worth-standardcharges-json-11a607",
+    "status": "reused",
+    "parser": "json-f2941acb08",
+    "fingerprint": "json-6ef3203fc5",
+    "kind": "json"
+  },
+  {
+    "id": "62-1682203-medical-city-frisco-standardcharges-json-8d2ba2",
+    "status": "reused",
+    "parser": "json-f2941acb08",
+    "fingerprint": "json-61f8f00437",
+    "kind": "json"
+  },
+  {
+    "id": "62-1682203-medical-city-plano-standardcharges-json-1a602d",
+    "status": "reused",
+    "parser": "json-f2941acb08",
+    "fingerprint": "json-f2941acb08",
+    "kind": "json"
+  },
+  {
+    "id": "62-1682203-medical-city-sachse-standardcharges-json-20165d",
+    "status": "reused",
+    "parser": "json-f2941acb08",
+    "fingerprint": "json-d7e1ed2d6a",
+    "kind": "json"
+  },
+  {
+    "id": "62-1682205-medical-city-north-hills-standardcharges-json-5dd5e3",
+    "status": "reused",
+    "parser": "json-f2941acb08",
+    "fingerprint": "json-cb9b96dfea",
+    "kind": "json"
+  },
+  {
+    "id": "62-1682207-medical-city-mckinney-standardcharges-json-0ed7fb",
+    "status": "reused",
+    "parser": "json-f2941acb08",
+    "fingerprint": "json-d7e1ed2d6a",
+    "kind": "json"
+  },
+  {
+    "id": "62-1682210-medical-city-lewisville-standardcharges-json-e1d15c",
+    "status": "reused",
+    "parser": "json-f2941acb08",
+    "fingerprint": "json-7e0ed82a1d",
+    "kind": "json"
+  },
+  {
+    "id": "62-1682213-medical-city-denton-standardcharges-json-6b301a",
+    "status": "reused",
+    "parser": "json-f2941acb08",
+    "fingerprint": "json-630663d9a4",
+    "kind": "json"
+  },
+  {
+    "id": "62-1682213-medical-ctiy-argyle-standardcharges-json-880209",
+    "status": "reused",
+    "parser": "json-f2941acb08",
+    "fingerprint": "json-d777c87691",
+    "kind": "json"
+  },
+  {
+    "id": "62-1797829-medical-city-green-oaks-hospital-standardcharges--00b4e9",
+    "status": "reused",
+    "parser": "json-f2941acb08",
+    "fingerprint": "json-d7e1ed2d6a",
+    "kind": "json"
+  },
+  {
+    "id": "82-2073410-medical-city-weatherford-standardcharges-json-0e9b6e",
+    "status": "reused",
+    "parser": "json-f2941acb08",
+    "fingerprint": "json-7e0ed82a1d",
+    "kind": "json"
+  },
+  {
+    "id": "93-2081386-medical-city-decatur-behavioral-health-standardch-0d582b",
+    "status": "reused",
+    "parser": "json-f2941acb08",
+    "fingerprint": "json-7e0ed82a1d",
+    "kind": "json"
+  },
+  {
+    "id": "93-2081386-medical-city-decatur-standardcharges-json-bd7cb4",
+    "status": "reused",
+    "parser": "json-f2941acb08",
+    "fingerprint": "json-d7e1ed2d6a",
+    "kind": "json"
+  },
+  {
+    "id": "dallas-price-transparency-csv-cost-estimates-csv-923e15",
+    "status": "reused",
+    "parser": "csv-tall-84ac1fc291",
+    "fingerprint": "csv-tall-1039d52671",
+    "kind": "csv-tall"
+  },
+  {
+    "id": "plano-price-transparency-csv-cost-estimates-csv-7a1ece",
+    "status": "reused",
+    "parser": "csv-tall-84ac1fc291",
+    "fingerprint": "csv-tall-1039d52671",
+    "kind": "csv-tall"
+  },
+  {
+    "id": "cookchildrens-2c26e6",
+    "status": "reused",
+    "parser": "csv-tall-84ac1fc291",
+    "fingerprint": "csv-tall-5ca0de12d5",
+    "kind": "csv-tall"
+  },
+  {
+    "id": "cookchildrensprosper-0b2b8a",
+    "status": "reused",
+    "parser": "csv-tall-84ac1fc291",
+    "fingerprint": "csv-tall-5ca0de12d5",
+    "kind": "csv-tall"
+  },
+  {
+    "id": "750800661-methodistcelinamedicalcenter-standardcharges-zip-6c0c21",
+    "status": "reused",
+    "parser": "csv-tall-84ac1fc291",
+    "fingerprint": "csv-tall-f954002b81",
+    "kind": "csv-tall"
+  },
+  {
+    "id": "750800661-methodistdallasmedicalcenter-standardcharges-zip-a696c8",
+    "status": "reused",
+    "parser": "csv-tall-84ac1fc291",
+    "fingerprint": "csv-tall-f954002b81",
+    "kind": "csv-tall"
+  },
+  {
+    "id": "750800661-methodistlegacyerandurgentcare-standardcharges-zip-39d03f",
+    "status": "reused",
+    "parser": "csv-tall-84ac1fc291",
+    "fingerprint": "csv-tall-f954002b81",
+    "kind": "csv-tall"
+  },
+  {
+    "id": "750800661-methodistmansfieldmedicalcenter-standardcharges-zi-d5f5cf",
+    "status": "reused",
+    "parser": "csv-tall-84ac1fc291",
+    "fingerprint": "csv-tall-f954002b81",
+    "kind": "csv-tall"
+  },
+  {
+    "id": "750800661-methodistmidlothianmedicalcenter-standardcharges-z-874828",
+    "status": "reused",
+    "parser": "csv-tall-84ac1fc291",
+    "fingerprint": "csv-tall-f954002b81",
+    "kind": "csv-tall"
+  },
+  {
+    "id": "750800661-methodistrichardsoncampusforcontinuingcare-standar-5913f8",
+    "status": "reused",
+    "parser": "csv-tall-84ac1fc291",
+    "fingerprint": "csv-tall-f954002b81",
+    "kind": "csv-tall"
+  },
+  {
+    "id": "750800661-methodistrichardsonmedicalcenter-standardcharges-z-f6e91d",
+    "status": "reused",
+    "parser": "csv-tall-84ac1fc291",
+    "fingerprint": "csv-tall-f954002b81",
+    "kind": "csv-tall"
+  },
+  {
+    "id": "750800661-methodistsouthlakemedicalcenter-standardcharges-zi-99ec77",
+    "status": "reused",
+    "parser": "csv-tall-84ac1fc291",
+    "fingerprint": "csv-tall-f954002b81",
+    "kind": "csv-tall"
+  },
+  {
+    "id": "756004221-parkland-health-standardcharges-csv-10162026-zip-fc4ab8",
+    "status": "reused",
+    "parser": "csv-tall-84ac1fc291",
+    "fingerprint": "csv-tall-84ac1fc291",
+    "kind": "csv-tall"
+  },
+  {
+    "id": "020555370-southlake-specialty-hospital-llc-standardcharges-c-d5b743",
+    "status": "reused",
+    "parser": "csv-tall-84ac1fc291",
+    "fingerprint": "csv-tall-1039d52671",
+    "kind": "csv-tall"
+  },
+  {
+    "id": "202848116-rockwall-regional-hospital-llc-standardcharges-csv-b36577",
+    "status": "reused",
+    "parser": "csv-tall-84ac1fc291",
+    "fingerprint": "csv-tall-1039d52671",
+    "kind": "csv-tall"
+  },
+  {
+    "id": "203003947-amh-cath-labs-llc-standardcharges-csv-20c088",
+    "status": "reused",
+    "parser": "csv-tall-84ac1fc291",
+    "fingerprint": "csv-tall-1039d52671",
+    "kind": "csv-tall"
+  },
+  {
+    "id": "260684968-flower-mound-hospital-partners-llc-standardcharges-05b37b",
+    "status": "reused",
+    "parser": "csv-tall-84ac1fc291",
+    "fingerprint": "csv-tall-1039d52671",
+    "kind": "csv-tall"
+  },
+  {
+    "id": "432008974-texas-health-presbyterian-hospital-denton-standard-410d66",
+    "status": "reused",
+    "parser": "csv-tall-84ac1fc291",
+    "fingerprint": "csv-tall-1039d52671",
+    "kind": "csv-tall"
+  },
+  {
+    "id": "451502252-texas-health-harris-methodist-hospital-alliance-st-b104e6",
+    "status": "reused",
+    "parser": "csv-tall-84ac1fc291",
+    "fingerprint": "csv-tall-1039d52671",
+    "kind": "csv-tall"
+  },
+  {
+    "id": "481281376-physicians-medical-center-llc-standardcharges-csv-912109",
+    "status": "reused",
+    "parser": "csv-tall-84ac1fc291",
+    "fingerprint": "csv-tall-1039d52671",
+    "kind": "csv-tall"
+  },
+  {
+    "id": "750972805-texas-health-arlington-memorial-hospital-standardc-269d8e",
+    "status": "reused",
+    "parser": "csv-tall-84ac1fc291",
+    "fingerprint": "csv-tall-1039d52671",
+    "kind": "csv-tall"
+  },
+  {
+    "id": "751047527-texas-health-presbyterian-hospital-dallas-standard-f0818d",
+    "status": "reused",
+    "parser": "csv-tall-84ac1fc291",
+    "fingerprint": "csv-tall-1039d52671",
+    "kind": "csv-tall"
+  },
+  {
+    "id": "751438726-1104845015-texas-health-harris-methodist-hospital--5b058b",
+    "status": "reused",
+    "parser": "csv-tall-84ac1fc291",
+    "fingerprint": "csv-tall-1039d52671",
+    "kind": "csv-tall"
+  },
+  {
+    "id": "751438726-1306870399-texas-health-harris-methodist-hospital--001b24",
+    "status": "reused",
+    "parser": "csv-tall-84ac1fc291",
+    "fingerprint": "csv-tall-1039d52671",
+    "kind": "csv-tall"
+  },
+  {
+    "id": "751648589-texas-health-specialty-hospital-fort-worth-standar-d4a39e",
+    "status": "reused",
+    "parser": "csv-tall-84ac1fc291",
+    "fingerprint": "csv-tall-1039d52671",
+    "kind": "csv-tall"
+  },
+  {
+    "id": "751748586-texas-health-harris-methodist-hospital-azle-standa-dd11a9",
+    "status": "reused",
+    "parser": "csv-tall-84ac1fc291",
+    "fingerprint": "csv-tall-1039d52671",
+    "kind": "csv-tall"
+  },
+  {
+    "id": "751752253-texas-health-harris-methodist-hospital-stephenvill-63b749",
+    "status": "reused",
+    "parser": "csv-tall-84ac1fc291",
+    "fingerprint": "csv-tall-1039d52671",
+    "kind": "csv-tall"
+  },
+  {
+    "id": "751977850-texas-health-harris-methodist-hospital-cleburne-st-6b5469",
+    "status": "reused",
+    "parser": "csv-tall-84ac1fc291",
+    "fingerprint": "csv-tall-1039d52671",
+    "kind": "csv-tall"
+  },
+  {
+    "id": "752678857-texas-health-harris-methodist-hospital-southwest-f-7c3cc6",
+    "status": "reused",
+    "parser": "csv-tall-84ac1fc291",
+    "fingerprint": "csv-tall-1039d52671",
+    "kind": "csv-tall"
+  },
+  {
+    "id": "752770738-1730245135-texas-health-presbyterian-hospital-plan-ed3a58",
+    "status": "reused",
+    "parser": "csv-tall-84ac1fc291",
+    "fingerprint": "csv-tall-1039d52671",
+    "kind": "csv-tall"
+  },
+  {
+    "id": "752770738-1770514077-texas-health-presbyterian-hospital-plan-700de7",
+    "status": "reused",
+    "parser": "csv-tall-84ac1fc291",
+    "fingerprint": "csv-tall-1039d52671",
+    "kind": "csv-tall"
+  },
+  {
+    "id": "752771437-texas-health-presbyterian-hospital-kaufman-standar-3d5ed6",
+    "status": "reused",
+    "parser": "csv-tall-84ac1fc291",
+    "fingerprint": "csv-tall-1039d52671",
+    "kind": "csv-tall"
+  },
+  {
+    "id": "752890358-texas-health-presbyterian-hospital-allen-standardc-3101f1",
+    "status": "reused",
+    "parser": "csv-tall-84ac1fc291",
+    "fingerprint": "csv-tall-1039d52671",
+    "kind": "csv-tall"
+  },
+  {
+    "id": "756001743-texas-health-harris-methodist-hospital-fort-worth--ff3221",
+    "status": "reused",
+    "parser": "csv-tall-84ac1fc291",
+    "fingerprint": "csv-tall-1039d52671",
+    "kind": "csv-tall"
+  },
+  {
+    "id": "831954982-texas-health-hospital-frisco-standardcharges-csv-69e3ef",
+    "status": "reused",
+    "parser": "csv-tall-84ac1fc291",
+    "fingerprint": "csv-tall-1039d52671",
+    "kind": "csv-tall"
+  },
+  {
+    "id": "753175630-the-university-of-texas-southwestern-medical-cente-7c0ab6",
+    "status": "reused",
+    "parser": "csv-tall-84ac1fc291",
+    "fingerprint": "csv-tall-1039d52671",
+    "kind": "csv-tall"
+  }
+]

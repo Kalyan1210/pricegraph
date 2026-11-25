@@ -1,0 +1,17 @@
+{
+  "fingerprint": "csv-tall-84ac1fc291",
+  "kind": "csv-tall",
+  "written_for": "756004221-parkland-health-standardcharges-csv-10162026-zip-fc4ab8",
+  "turns": 1,
+  "cost_usd": 0.002372,
+  "stats": {
+    "rows": 57,
+    "sample_data_lines": 56,
+    "code_types": {
+      "MS-DRG": 40,
+      "APR-DRG": 17
+    },
+    "with_negotiated": 57,
+    "payers": 22
+  }
+}

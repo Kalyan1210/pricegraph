@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PriceGraph · Muse Ember</title>
+<style>
+.viz-root, :root {
+  color-scheme: dark;
+  --bg: #121211;
+  --surface-1: #1a1a19;
+  --surface-2: #232321;
+  --border: #33332f;
+  --text-primary: #f0efec;
+  --text-secondary: #c3c2b7;
+  --text-muted: #8e8d84;
+  --series-1: #3987e5;      /* negotiated range */
+  --series-2: #d95926;      /* cash price */
+  --good: #0ca30c;
+  --warning: #fab219;
+  --critical: #d03b3b;
+  --accent: #3987e5;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text-primary);
+  font: 14px/1.45 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+header { display: flex; align-items: center; gap: 24px; padding: 18px 28px; border-bottom: 1px solid var(--border); }
+h1 { margin: 0; font-size: 22px; letter-spacing: -0.01em; }
+.sub { color: var(--text-secondary); font-size: 13px; }
+.meter { margin-left: auto; text-align: right; }
+.meter .usd { font: 600 30px/1 ui-monospace, SFMono-Regular, Menlo, monospace; font-variant-numeric: tabular-nums; }
+.meter .cap { color: var(--text-muted); font-size: 12px; margin-top: 4px; }
+.controls { display: flex; gap: 8px; align-items: center; }
+button, input, select { background: var(--surface-2); color: var(--text-primary); border: 1px solid var(--border);
+  border-radius: 6px; padding: 7px 11px; font: inherit; }
+button { cursor: pointer; } button:hover { border-color: var(--text-muted); }
+button.primary { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600; }
+main { padding: 20px 28px 40px; display: grid; gap: 20px; }
+.stats { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; }
+.stat { background: var(--surface-1); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; }
+.stat .v { font: 600 26px/1.1 ui-monospace, SFMono-Regular, Menlo, monospace; font-variant-numeric: tabular-nums; }
+.stat .k { color: var(--text-secondary); font-size: 12px; margin-top: 4px; }
+.row { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; }
+.panel { background: var(--surface-1); border: 1px solid var(--border); border-radius: 10px; padding: 16px; min-width: 0; }
+.panel h2 { margin: 0 0 12px; font-size: 14px; font-weight: 600; color: var(--text-secondary); text-transform: uppercase; letter-spacing: .04em; }
+.system { margin-bottom: 12px; }
+.system .name { font-size: 12px; color: var(--text-muted); margin-bottom: 6px; }
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 6px; }
+.tile { background: var(--surface-2); border: 1px solid var(--border); border-radius: 7px; padding: 7px 9px; min-height: 52px;
+  position: relative; overflow: hidden; transition: border-color .3s, background .3s; }
+.tile .t { font-size: 11.5px; line-height: 1.25; color: var(--text-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.tile .s { font-size: 11px; color: var(--text-secondary); margin-top: 4px; display: flex; gap: 5px; align-items: center; }
+.tile .bar { position: absolute; left: 0; bottom: 0; height: 3px; background: var(--accent); width: 0; transition: width .5s; }
+.dot { width: 8px; height: 8px; border-radius: 50%; background: var(--text-muted); flex: none; }
+.tile.working { border-color: var(--warning); } .tile.working .dot { background: var(--warning); animation: pulse 1s infinite; }
+.tile.reused .dot, .tile.written .dot, .tile.loaded .dot { background: var(--good); }
+.tile.written { border-color: var(--good); }
+.tile.loaded { background: #1d261c; }
+.tile.failed { border-color: var(--critical); } .tile.failed .dot { background: var(--critical); }
+@keyframes pulse { 50% { opacity: .3; } }
+.log { height: 520px; overflow-y: auto; font: 12px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--text-secondary); }
+.log div { padding: 2px 0; border-bottom: 1px dashed #2a2a27; }
+.log .ember { color: var(--text-primary); }
+.log .cost { color: var(--text-muted); }
+.ask { display: flex; gap: 8px; } .ask input { flex: 1; font-size: 15px; padding: 10px 12px; }
+.answer { margin: 14px 0 6px; font-size: 15px; line-height: 1.55; min-height: 22px; }
+.steps { color: var(--text-muted); font-size: 12px; }
+.filters { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin-bottom: 10px; }
+.legend { display: flex; gap: 16px; color: var(--text-secondary); font-size: 12px; margin: 6px 0 10px; }
+.legend span { display: inline-flex; gap: 6px; align-items: center; }
+.sw-range { width: 18px; height: 6px; border-radius: 3px; background: var(--series-1); }
+.sw-med { width: 10px; height: 10px; border-radius: 50%; background: var(--text-primary); box-shadow: 0 0 0 2px var(--surface-1); }
+.sw-cash { width: 9px; height: 9px; background: var(--series-2); transform: rotate(45deg); }
+#chart { width: 100%; }
+#chart text { fill: var(--text-secondary); font-size: 11.5px; }
+#chart .hosp { fill: var(--text-primary); }
+#chart .grid { stroke: #2c2c29; }
+#chart .hit { fill: transparent; cursor: default; }
+#chart .hit:hover { fill: rgba(255,255,255,.04); }
+.tip { position: fixed; pointer-events: none; background: #0d0d0c; border: 1px solid var(--border); border-radius: 8px;
+  padding: 9px 11px; font-size: 12px; line-height: 1.5; display: none; z-index: 10; min-width: 200px; }
+.tip b { color: var(--text-primary); } .tip .m { color: var(--text-secondary); font-variant-numeric: tabular-nums; }
+table { width: 100%; border-collapse: collapse; font-size: 12.5px; font-variant-numeric: tabular-nums; }
+th, td { text-align: right; padding: 5px 8px; border-bottom: 1px solid var(--border); }
+th:first-child, td:first-child { text-align: left; } th { color: var(--text-secondary); font-weight: 500; }
+.muted { color: var(--text-muted); }
+.hidden { display: none; }
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1>PriceGraph</h1>
+    <div class="sub">Every hospital price file in Dallas-Fort Worth, parsed by Muse Ember agents for pennies</div>
+  </div>
+  <div class="controls">
+    <input id="limit" type="number" min="1" placeholder="files (all)" style="width:110px" title="Limit number of files">
+    <input id="maxmb" type="number" min="1" placeholder="MB/file (full)" style="width:120px" title="Cap MB streamed per file">
+    <button class="primary" id="run">Run pipeline</button>
+  </div>
+  <div class="meter">
+    <div class="usd" id="usd">$0.0000</div>
+    <div class="cap" id="cap">Ember spend · 0 calls</div>
+  </div>
+</header>
+<main>
+  <section class="stats">
+    <div class="stat"><div class="v" id="s-files">0</div><div class="k">price files found</div></div>
+    <div class="stat"><div class="v" id="s-written">0</div><div class="k">parsers Ember wrote</div></div>
+    <div class="stat"><div class="v" id="s-reused">0</div><div class="k">files reusing a parser ($0)</div></div>
+    <div class="stat"><div class="v" id="s-gb">0.00</div><div class="k">GB streamed</div></div>
+    <div class="stat"><div class="v" id="s-rows">0</div><div class="k">prices loaded</div></div>
+    <div class="stat"><div class="v" id="s-payers">0 → 0</div><div class="k">payer names → insurers</div></div>
+  </section>
+
+  <section class="row">
+    <div class="panel"><h2>Hospital price files</h2><div id="wall"></div></div>
+    <div class="panel"><h2>Agent log</h2><div class="log" id="log"></div></div>
+  </section>
+
+  <section class="panel">
+    <h2>Ask</h2>
+    <div class="ask">
+      <input id="q" placeholder="How much is an MRI of the lower back with Aetna in Dallas?">
+      <button class="primary" id="askbtn">Ask Ember</button>
+    </div>
+    <div class="answer" id="answer"></div>
+    <div class="steps" id="steps"></div>
+  </section>
+
+  <section class="panel">
+    <h2>Compare</h2>
+    <div class="filters">
+      <select id="svc"></select>
+      <select id="payer"><option value="">All insurers</option></select>
+      <select id="lob">
+        <option value="">All lines of business</option><option value="commercial">Commercial</option>
+        <option value="medicare">Medicare Advantage</option><option value="medicaid">Medicaid</option>
+        <option value="exchange">ACA Exchange</option>
+      </select>
+      <button id="tabletoggle">Table view</button>
+    </div>
+    <div id="charttitle" class="muted"></div>
+    <div class="legend">
+      <span><i class="sw-range"></i>Negotiated rates, lowest to highest</span>
+      <span><i class="sw-med"></i>Median negotiated rate</span>
+      <span><i class="sw-cash"></i>Cash price</span>
+    </div>
+    <svg id="chart" role="img" aria-label="Price range by hospital"></svg>
+    <div id="tablewrap" class="hidden"></div>
+  </section>
+</main>
+<div class="tip" id="tip"></div>
+
+<script>
+const $ = (id) => document.getElementById(id);
+const fmt$ = (v) => v == null ? "—" : "$" + Math.round(v).toLocaleString();
+const tiles = {};           // id -> {el, state}
+const st = { files: 0, written: new Set(), reused: new Set(), bytes: {}, rows: {}, payerStrings: 0, payers: 0 };
+
+function shortName(s) {
+  const loc = (s.locations && s.locations[0]) || s.id;
+  return loc.replace(/^(Texas Health( Presbyterian| Harris Methodist)? Hospital|MEDICAL CITY|Methodist)\s*/i, (m) => m.trim().split(" ")[0] + " ")
+            .replace(/\s+/g, " ");
+}
+const SYS = {"texashealth.org":"Texas Health Resources","medicalcityhealthcare.com":"Medical City (HCA)",
+  "methodisthealthsystem.org":"Methodist Health System","utsouthwestern.edu":"UT Southwestern",
+  "parklandhealth.org":"Parkland Health","childrens.com":"Children's Health","cookchildrens.org":"Cook Children's",
+  "jpshealthnet.org":"JPS Health Network"};
+
+function buildWall(sources) {
+  const wall = $("wall"); wall.innerHTML = "";
+  const groups = {};
+  sources.forEach(s => { const k = SYS[s.domain.replace("www.","")] || s.domain; (groups[k] = groups[k] || []).push(s); });
+  for (const [name, list] of Object.entries(groups)) {
+    const g = document.createElement("div"); g.className = "system";
+    g.innerHTML = `<div class="name">${name} · ${list.length} file${list.length > 1 ? "s" : ""}</div><div class="tiles"></div>`;
+    const box = g.querySelector(".tiles");
+    list.forEach(s => {
+      const el = document.createElement("div"); el.className = "tile";
+      el.title = (s.locations || []).join("\n") + (s.flags && s.flags.length ? "\n⚑ " + s.flags.join(", ") : "");
+      el.innerHTML = `<div class="t">${shortName(s)}</div><div class="s"><i class="dot"></i><span>queued</span></div><div class="bar"></div>`;
+      box.appendChild(el);
+      tiles[s.id] = { el, state: "queued" };
+    });
+    wall.appendChild(g);
+  }
+  st.files = sources.length; $("s-files").textContent = st.files;
+}
+
+function setTile(id, cls, label, pct) {
+  const t = tiles[id]; if (!t) return;
+  t.el.className = "tile " + cls; t.state = cls;
+  t.el.querySelector(".s span").textContent = label;
+  if (pct != null) t.el.querySelector(".bar").style.width = Math.min(100, pct) + "%";
+}
+
+function log(html, cls = "") {
+  const d = document.createElement("div"); d.className = cls; d.innerHTML = html;
+  const L = $("log"); L.prepend(d); while (L.children.length > 400) L.lastChild.remove();
+}
+
+function updateStats() {
+  $("s-written").textContent = st.written.size; $("s-reused").textContent = st.reused.size;
+  $("s-gb").textContent = (Object.values(st.bytes).reduce((a, b) => a + b, 0) / 1000).toFixed(2);
+  $("s-rows").textContent = Object.values(st.rows).reduce((a, b) => a + b, 0).toLocaleString();
+}
+function setMeter(total, calls) {
+  $("usd").textContent = "$" + total.toFixed(4);
+  if (calls != null) $("cap").textContent = `Ember spend of $10 · ${calls} calls`;
+}
+let calls = 0;
+
+function onEvent(e) {
+  const short = (id) => { const t = tiles[id]; return t ? t.el.querySelector(".t").textContent : id; };
+  switch (e.kind) {
+    case "run_start": st.written = new Set(); st.reused = new Set(); st.bytes = {}; st.rows = {}; log(`▶ run started`, "ember"); break;
+    case "index": if (e.status !== "ok") log(`⚑ ${e.domain}: skipped (${e.detail})`); else log(`index ${e.domain}: ${e.files} files`); break;
+    case "discovered": refreshSources(); break;
+    case "file_start": setTile(e.id, "working", "sampling…"); break;
+    case "file_profiled": setTile(e.id, "working", e.fmt); break;
+    case "parser_test":
+      setTile(e.id, "working", `Ember try ${e.turn + 1}: ${e.ok ? "pass" : "fix"}`);
+      log(`<b>${short(e.id)}</b> · Ember parser try ${e.turn + 1}: ${e.ok ? "✓ passed on " + e.rows + " rows" : "✗ " + (e.errors[0] || "").slice(0, 110)}`, "ember");
+      break;
+    case "file_done":
+      if (e.status === "written") { st.written.add(e.id); st.reused.delete(e.id); setTile(e.id, "written", `✓ Ember wrote parser (${e.turns} tries, $${e.cost.toFixed(4)})`);
+        log(`<b>${short(e.id)}</b> · new parser saved to library · $${e.cost.toFixed(4)}`, "ember"); }
+      else if (e.status === "reused") { if (!st.written.has(e.id)) st.reused.add(e.id); setTile(e.id, "reused", "✓ reused parser · $0"); }
+      else { setTile(e.id, "failed", "✗ " + e.status); log(`<b>${short(e.id)}</b> · ${e.status} ${e.detail || ""}`); }
+      updateStats(); break;
+    case "load_start": setTile(e.id, tiles[e.id] ? tiles[e.id].state : "", "streaming…", 2); break;
+    case "load_progress":
+      st.bytes[e.id] = e.mb; st.rows[e.id] = e.rows_kept;
+      setTile(e.id, "loaded", `${e.mb.toLocaleString()} MB · ${e.rows_kept.toLocaleString()} prices`, Math.min(98, e.mb / 20));
+      updateStats(); break;
+    case "load_done":
+      st.bytes[e.id] = e.mb || 0; st.rows[e.id] = e.rows_kept || 0;
+      if (e.status === "ok") setTile(e.id, "loaded", `✓ ${(e.mb || 0).toLocaleString()} MB · ${(e.rows_kept || 0).toLocaleString()} prices`, 100);
+      else setTile(e.id, "failed", "✗ load error");
+      updateStats(); break;
+    case "ember_call":
+      calls++; setMeter(e.total, calls);
+      log(`<span class="cost">Ember ${e.purpose} · ${e.prompt_tokens}→${e.completion_tokens} tok · $${e.cost.toFixed(5)} · ${e.latency}s</span>`);
+      break;
+    case "payers_start": log(`Ember normalizing ${e.distinct.toLocaleString()} payer/plan names…`, "ember"); st.payerStrings = e.distinct; break;
+    case "payers_batch": log(`payer batch ${e.n}: ${e.mapped}/${e.of} mapped`); break;
+    case "payers_done": case "payers_consolidated": refreshSources(); loadFilters(); break;
+    case "run_done": log(`■ done · ${e.files} files · ${e.parsers_written} parsers written · ${e.reused} reused · run cost $${e.run_cost_usd.toFixed(4)}`, "ember"); loadFilters(); break;
+  }
+}
+
+async function refreshSources() {
+  const s = await (await fetch("/api/state")).json();
+  if (s.sources && s.sources.length && Object.keys(tiles).length !== s.sources.length) buildWall(s.sources);
+  calls = s.totals.calls; setMeter(s.totals.cost_usd, calls);
+  if (s.db && s.db.mapped_strings) $("s-payers").textContent = `${s.db.mapped_strings.toLocaleString()} → ${s.db.canonical_payers}`;
+  return s;
+}
+
+function startStream() {
+  const es = new EventSource("/api/events?replay=1");
+  es.onmessage = (m) => { try { onEvent(JSON.parse(m.data)); } catch (err) { console.error(err); } };
+}
+
+$("run").onclick = async () => {
+  const body = { limit: +$("limit").value || null, max_mb: +$("maxmb").value || null, load: true };
+  Object.keys(tiles).forEach(k => delete tiles[k]); st.written = new Set(); st.reused = new Set(); st.bytes = {}; st.rows = {};
+  $("log").innerHTML = ""; updateStats();
+  const r = await fetch("/api/run", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
+  if (!r.ok) log("⚠ " + (await r.json()).error);
+};
+
+// ---------- Ask ----------
+$("askbtn").onclick = async () => {
+  const q = $("q").value.trim(); if (!q) return;
+  $("answer").textContent = "Ember is looking it up…"; $("steps").textContent = "";
+  const r = await (await fetch("/api/ask", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ q }) })).json();
+  if (r.error) { $("answer").textContent = "Error: " + r.error; return; }
+  $("answer").textContent = r.answer;
+  $("steps").textContent = "Tool calls: " + r.steps.map(s => s.tool + "(" + Object.values(s.args).filter(Boolean).join(", ") + ")").join(" → ") + ` · cost $${r.cost_usd.toFixed(5)}`;
+  if (r.table) { $("svc").value = r.table.code; drawChart(r.table); }
+};
+$("q").addEventListener("keydown", (e) => { if (e.key === "Enter") $("askbtn").click(); });
+
+// ---------- Compare chart ----------
+async function loadFilters() {
+  const svcs = await (await fetch("/api/services")).json();
+  const sel = $("svc"), cur = sel.value; sel.innerHTML = "";
+  svcs.forEach(s => { const o = document.createElement("option"); o.value = s.code; o.textContent = `${s.label} · ${s.hospitals} hospitals`; sel.appendChild(o); });
+  if (cur) sel.value = cur;
+  else if ([...sel.options].some(o => o.value === "72148")) sel.value = "72148";   // lower-back MRI: the demo default
+  const pay = await (await fetch("/api/payers")).json();
+  const ps = $("payer"), pcur = ps.value; ps.innerHTML = '<option value="">All insurers</option>';
+  pay.forEach(p => { const o = document.createElement("option"); o.value = p.payer; o.textContent = p.payer; ps.appendChild(o); });
+  if (pcur) ps.value = pcur;
+  if (sel.value) compare();
+}
+async function compare() {
+  const code = $("svc").value; if (!code) return;
+  const u = `/api/compare?code=${encodeURIComponent(code)}&payer=${encodeURIComponent($("payer").value)}&lob=${$("lob").value}`;
+  drawChart(await (await fetch(u)).json());
+}
+["svc", "payer", "lob"].forEach(id => $(id).onchange = compare);
+$("tabletoggle").onclick = () => { $("tablewrap").classList.toggle("hidden"); $("chart").classList.toggle("hidden");
+  $("tabletoggle").textContent = $("chart").classList.contains("hidden") ? "Chart view" : "Table view"; };
+
+function niceMax(v) { const p = Math.pow(10, Math.floor(Math.log10(v))); return Math.ceil(v / p) * p; }
+
+function drawChart(d) {
+  const rows = d.hospitals || [];
+  $("charttitle").textContent = rows.length
+    ? `${d.service} (${d.code}) · ${d.payer} · ${rows.length} hospitals · sorted by median`
+    : `${d.service || d.code}: no posted prices for this filter`;
+  const svg = $("chart");
+  const W = svg.clientWidth || 1000, L = 250, R = 70, rowH = 26, T = 24;
+  const H = T + rows.length * rowH + 10;
+  svg.setAttribute("viewBox", `0 0 ${W} ${H}`); svg.setAttribute("height", H);
+  if (!rows.length) { svg.innerHTML = ""; $("tablewrap").innerHTML = ""; return; }
+  const max = niceMax(Math.max(...rows.map(r => Math.max(r.high || 0, r.cash || 0))) || 1);
+  const x = (v) => L + (v / max) * (W - L - R);
+  let g = "";
+  for (let i = 0; i <= 4; i++) { const v = max * i / 4, xx = x(v);
+    g += `<line class="grid" x1="${xx}" x2="${xx}" y1="${T - 6}" y2="${H - 6}"/><text x="${xx}" y="${T - 10}" text-anchor="middle">${fmt$(v)}</text>`; }
+  const labelIdx = new Set([0, rows.length - 1]);
+  rows.forEach((r, i) => {
+    const y = T + i * rowH + rowH / 2;
+    const name = r.hospital.length > 36 ? r.hospital.slice(0, 35) + "…" : r.hospital;
+    g += `<text class="hosp" x="${L - 10}" y="${y + 4}" text-anchor="end">${name}</text>`;
+    const x1 = x(r.low || 0), x2 = Math.max(x(r.high || 0), x1 + 4);
+    g += `<rect x="${x1}" y="${y - 3}" width="${x2 - x1}" height="6" rx="3" fill="var(--series-1)"/>`;
+    if (r.cash) g += `<rect x="${x(r.cash) - 4.5}" y="${y - 4.5}" width="9" height="9" transform="rotate(45 ${x(r.cash)} ${y})" fill="var(--series-2)" stroke="var(--surface-1)" stroke-width="2"/>`;
+    g += `<circle cx="${x(r.median)}" cy="${y}" r="5" fill="var(--text-primary)" stroke="var(--surface-1)" stroke-width="2"/>`;
+    if (labelIdx.has(i)) g += `<text x="${x2 + 8}" y="${y + 4}">${fmt$(r.median)} median</text>`;
+    g += `<rect class="hit" data-i="${i}" x="0" y="${y - rowH / 2}" width="${W}" height="${rowH}"/>`;
+  });
+  svg.innerHTML = g;
+  const tip = $("tip");
+  svg.querySelectorAll(".hit").forEach(h => {
+    h.onmousemove = (ev) => { const r = rows[+h.dataset.i];
+      tip.innerHTML = `<b>${r.hospital}</b><br><span class="muted">${r.system}</span><br>
+        <span class="m">Lowest ${fmt$(r.low)} · Median ${fmt$(r.median)} · Highest ${fmt$(r.high)}</span><br>
+        <span class="m">Cash ${fmt$(r.cash)} · ${r.payers} insurers · ${r.n_rates} posted rates</span>`;
+      tip.style.display = "block"; tip.style.left = (ev.clientX + 14) + "px"; tip.style.top = (ev.clientY + 14) + "px"; };
+    h.onmouseleave = () => tip.style.display = "none";
+  });
+  $("tablewrap").innerHTML = `<table><tr><th>Hospital</th><th>Lowest</th><th>Median</th><th>Highest</th><th>Cash</th><th>Insurers</th><th>Rates</th></tr>` +
+    rows.map(r => `<tr><td>${r.hospital}</td><td>${fmt$(r.low)}</td><td>${fmt$(r.median)}</td><td>${fmt$(r.high)}</td><td>${fmt$(r.cash)}</td><td>${r.payers}</td><td>${r.n_rates}</td></tr>`).join("") + "</table>";
+}
+
+refreshSources().then(() => { startStream(); loadFilters(); });
+window.addEventListener("resize", () => compare());
+</script>
+</body>
+</html>

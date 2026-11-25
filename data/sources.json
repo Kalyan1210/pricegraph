@@ -1,0 +1,571 @@
+[
+  {
+    "id": "46-4027347-medical-city-alliance-standardcharges-json-ee7a00",
+    "domain": "medicalcityhealthcare.com",
+    "url": "https://stctrprodsnsvc00455826e6.blob.core.windows.net/pt-final-posting-files/46-4027347_MEDICAL-CITY-ALLIANCE_standardcharges.json?si=dpx-pt-json-access-policy&spr=https&sv=2026-02-06&sr=c&sig=ks%2BgfAjyEHlZmeP2PYJ%2f9NpMuCoRStjTb2bhIy9Y6LM%3D",
+    "locations": [
+      "MEDICAL CITY ALLIANCE HOSPITAL",
+      "MEDICAL CITY ER SAGINAW",
+      "MEDICAL CITY ER HASLET"
+    ],
+    "flags": [
+      "shared-by-3-locations"
+    ]
+  },
+  {
+    "id": "46-4027347-medical-city-mental-health-and-wellness-center-al-8ecfe6",
+    "domain": "medicalcityhealthcare.com",
+    "url": "https://stctrprodsnsvc00455826e6.blob.core.windows.net/pt-final-posting-files/46-4027347_MEDICAL-CITY-MENTAL-HEALTH-AND-WELLNESS-CENTER-ALLIANCE_standardcharges.json?si=dpx-pt-json-access-policy&spr=https&sv=2026-02-06&sr=c&sig=ks%2BgfAjyEHlZmeP2PYJ%2f9NpMuCoRStjTb2bhIy9Y6LM%3D",
+    "locations": [
+      "MEDICAL CITY MENTAL HEALTH AND WELLNESS CENTER - ALLIANCE"
+    ],
+    "flags": []
+  },
+  {
+    "id": "46-4027347-medical-city-surgery-city-alliance-standardcharge-eb0b6f",
+    "domain": "medicalcityhealthcare.com",
+    "url": "https://stctrprodsnsvc00455826e6.blob.core.windows.net/pt-final-posting-files/46-4027347_MEDICAL-CITY-SURGERY-CITY-ALLIANCE_standardcharges.json?si=dpx-pt-json-access-policy&spr=https&sv=2026-02-06&sr=c&sig=ks%2BgfAjyEHlZmeP2PYJ%2f9NpMuCoRStjTb2bhIy9Y6LM%3D",
+    "locations": [
+      "MEDICAL CITY SURGICAL HOSPITAL ALLIANCE"
+    ],
+    "flags": []
+  },
+  {
+    "id": "62-1650582-medical-city-las-colinas-standardcharges-json-0c2648",
+    "domain": "medicalcityhealthcare.com",
+    "url": "https://stctrprodsnsvc00455826e6.blob.core.windows.net/pt-final-posting-files/62-1650582_MEDICAL-CITY-LAS-COLINAS_standardcharges.json?si=dpx-pt-json-access-policy&spr=https&sv=2026-02-06&sr=c&sig=ks%2BgfAjyEHlZmeP2PYJ%2f9NpMuCoRStjTb2bhIy9Y6LM%3D",
+    "locations": [
+      "MEDICAL CITY LAS COLINAS HOSPITAL"
+    ],
+    "flags": []
+  },
+  {
+    "id": "62-1682198-med-city-heart-hospital-standardcharges-json-a59087",
+    "domain": "medicalcityhealthcare.com",
+    "url": "https://stctrprodsnsvc00455826e6.blob.core.windows.net/pt-final-posting-files/62-1682198_MED-CITY-HEART-HOSPITAL_standardcharges.json?si=dpx-pt-json-access-policy&spr=https&sv=2026-02-06&sr=c&sig=ks%2BgfAjyEHlZmeP2PYJ%2f9NpMuCoRStjTb2bhIy9Y6LM%3D",
+    "locations": [
+      "MEDICAL CITY HEART HOSPITAL"
+    ],
+    "flags": []
+  },
+  {
+    "id": "62-1682198-med-city-spine-hospital-standardcharges-json-fc0bcc",
+    "domain": "medicalcityhealthcare.com",
+    "url": "https://stctrprodsnsvc00455826e6.blob.core.windows.net/pt-final-posting-files/62-1682198_MED-CITY-SPINE-HOSPITAL_standardcharges.json?si=dpx-pt-json-access-policy&spr=https&sv=2026-02-06&sr=c&sig=ks%2BgfAjyEHlZmeP2PYJ%2f9NpMuCoRStjTb2bhIy9Y6LM%3D",
+    "locations": [
+      "MEDICAL CITY SPINE HOSPITAL"
+    ],
+    "flags": []
+  },
+  {
+    "id": "62-1682198-medical-city-dallas-standardcharges-json-dca9c8",
+    "domain": "medicalcityhealthcare.com",
+    "url": "https://stctrprodsnsvc00455826e6.blob.core.windows.net/pt-final-posting-files/62-1682198_MEDICAL-CITY-DALLAS_standardcharges.json?si=dpx-pt-json-access-policy&spr=https&sv=2026-02-06&sr=c&sig=ks%2BgfAjyEHlZmeP2PYJ%2f9NpMuCoRStjTb2bhIy9Y6LM%3D",
+    "locations": [
+      "MEDICAL CITY DALLAS HOSPITAL",
+      "MEDICAL CITY CHILDREN'S HOSPITAL",
+      "MEDICAL CITY ER GARLAND"
+    ],
+    "flags": [
+      "shared-by-3-locations"
+    ]
+  },
+  {
+    "id": "62-1682201-medical-city-arlington-standardcharges-json-d9bf63",
+    "domain": "medicalcityhealthcare.com",
+    "url": "https://stctrprodsnsvc00455826e6.blob.core.windows.net/pt-final-posting-files/62-1682201_MEDICAL-CITY-ARLINGTON_standardcharges.json?si=dpx-pt-json-access-policy&spr=https&sv=2026-02-06&sr=c&sig=ks%2BgfAjyEHlZmeP2PYJ%2f9NpMuCoRStjTb2bhIy9Y6LM%3D",
+    "locations": [
+      "MEDICAL CITY ARLINGTON HOSPITAL",
+      "MEDICAL CITY ER GRAND PRARIE",
+      "MEDICAL CITY ER RED OAK"
+    ],
+    "flags": [
+      "shared-by-3-locations"
+    ]
+  },
+  {
+    "id": "62-1682202-medical-city-fort-worth-standardcharges-json-11a607",
+    "domain": "medicalcityhealthcare.com",
+    "url": "https://stctrprodsnsvc00455826e6.blob.core.windows.net/pt-final-posting-files/62-1682202_MEDICAL-CITY-FORT-WORTH_standardcharges.json?si=dpx-pt-json-access-policy&spr=https&sv=2026-02-06&sr=c&sig=ks%2BgfAjyEHlZmeP2PYJ%2f9NpMuCoRStjTb2bhIy9Y6LM%3D",
+    "locations": [
+      "MEDICAL CITY FORT WORTH HOSPITAL",
+      "MEDICAL CITY ER WHITE SETTLEMENT"
+    ],
+    "flags": [
+      "shared-by-2-locations"
+    ]
+  },
+  {
+    "id": "62-1682203-medical-city-frisco-standardcharges-json-8d2ba2",
+    "domain": "medicalcityhealthcare.com",
+    "url": "https://stctrprodsnsvc00455826e6.blob.core.windows.net/pt-final-posting-files/62-1682203_MEDICAL-CITY-FRISCO_standardcharges.json?si=dpx-pt-json-access-policy&spr=https&sv=2026-02-06&sr=c&sig=ks%2BgfAjyEHlZmeP2PYJ%2f9NpMuCoRStjTb2bhIy9Y6LM%3D",
+    "locations": [
+      "MEDICAL CITY FRISCO HOSPITAL"
+    ],
+    "flags": []
+  },
+  {
+    "id": "62-1682203-medical-city-plano-standardcharges-json-1a602d",
+    "domain": "medicalcityhealthcare.com",
+    "url": "https://stctrprodsnsvc00455826e6.blob.core.windows.net/pt-final-posting-files/62-1682203_MEDICAL-CITY-PLANO_standardcharges.json?si=dpx-pt-json-access-policy&spr=https&sv=2026-02-06&sr=c&sig=ks%2BgfAjyEHlZmeP2PYJ%2f9NpMuCoRStjTb2bhIy9Y6LM%3D",
+    "locations": [
+      "MEDICAL CITY PLANO HOSPITAL"
+    ],
+    "flags": []
+  },
+  {
+    "id": "62-1682203-medical-city-sachse-standardcharges-json-20165d",
+    "domain": "medicalcityhealthcare.com",
+    "url": "https://stctrprodsnsvc00455826e6.blob.core.windows.net/pt-final-posting-files/62-1682203_MEDICAL-CITY-SACHSE_standardcharges.json?si=dpx-pt-json-access-policy&spr=https&sv=2026-02-06&sr=c&sig=ks%2BgfAjyEHlZmeP2PYJ%2f9NpMuCoRStjTb2bhIy9Y6LM%3D",
+    "locations": [
+      "MEDICAL CITY SACHSE HOSPITAL"
+    ],
+    "flags": []
+  },
+  {
+    "id": "62-1682205-medical-city-north-hills-standardcharges-json-5dd5e3",
+    "domain": "medicalcityhealthcare.com",
+    "url": "https://stctrprodsnsvc00455826e6.blob.core.windows.net/pt-final-posting-files/62-1682205_MEDICAL-CITY-NORTH-HILLS_standardcharges.json?si=dpx-pt-json-access-policy&spr=https&sv=2026-02-06&sr=c&sig=ks%2BgfAjyEHlZmeP2PYJ%2f9NpMuCoRStjTb2bhIy9Y6LM%3D",
+    "locations": [
+      "MEDICAL CITY NORTH HILLS HOSPITAL"
+    ],
+    "flags": []
+  },
+  {
+    "id": "62-1682207-medical-city-mckinney-standardcharges-json-0ed7fb",
+    "domain": "medicalcityhealthcare.com",
+    "url": "https://stctrprodsnsvc00455826e6.blob.core.windows.net/pt-final-posting-files/62-1682207_MEDICAL-CITY-MCKINNEY_standardcharges.json?si=dpx-pt-json-access-policy&spr=https&sv=2026-02-06&sr=c&sig=ks%2BgfAjyEHlZmeP2PYJ%2f9NpMuCoRStjTb2bhIy9Y6LM%3D",
+    "locations": [
+      "MEDICAL CITY MCKINNEY HOSPITAL",
+      "MEDICAL CITY ER STONEBRIDGE"
+    ],
+    "flags": [
+      "shared-by-2-locations"
+    ]
+  },
+  {
+    "id": "62-1682210-medical-city-lewisville-standardcharges-json-e1d15c",
+    "domain": "medicalcityhealthcare.com",
+    "url": "https://stctrprodsnsvc00455826e6.blob.core.windows.net/pt-final-posting-files/62-1682210_MEDICAL-CITY-LEWISVILLE_standardcharges.json?si=dpx-pt-json-access-policy&spr=https&sv=2026-02-06&sr=c&sig=ks%2BgfAjyEHlZmeP2PYJ%2f9NpMuCoRStjTb2bhIy9Y6LM%3D",
+    "locations": [
+      "MEDICAL CITY LEWISVILLE HOSPITAL"
+    ],
+    "flags": []
+  },
+  {
+    "id": "62-1682213-medical-city-denton-standardcharges-json-6b301a",
+    "domain": "medicalcityhealthcare.com",
+    "url": "https://stctrprodsnsvc00455826e6.blob.core.windows.net/pt-final-posting-files/62-1682213_MEDICAL-CITY-DENTON_standardcharges.json?si=dpx-pt-json-access-policy&spr=https&sv=2026-02-06&sr=c&sig=ks%2BgfAjyEHlZmeP2PYJ%2f9NpMuCoRStjTb2bhIy9Y6LM%3D",
+    "locations": [
+      "MEDICAL CITY DENTON HOSPITAL",
+      "MEDICAL CITY ER ARGYLE"
+    ],
+    "flags": [
+      "shared-by-2-locations"
+    ]
+  },
+  {
+    "id": "62-1682213-medical-ctiy-argyle-standardcharges-json-880209",
+    "domain": "medicalcityhealthcare.com",
+    "url": "https://stctrprodsnsvc00455826e6.blob.core.windows.net/pt-final-posting-files/62-1682213_MEDICAL-CTIY-ARGYLE_standardcharges.json?si=dpx-pt-json-access-policy&spr=https&sv=2026-02-06&sr=c&sig=ks%2BgfAjyEHlZmeP2PYJ%2f9NpMuCoRStjTb2bhIy9Y6LM%3D",
+    "locations": [
+      "MEDICAL CITY ARGYLE HOSPITAL"
+    ],
+    "flags": []
+  },
+  {
+    "id": "62-1797829-medical-city-green-oaks-hospital-standardcharges--00b4e9",
+    "domain": "medicalcityhealthcare.com",
+    "url": "https://stctrprodsnsvc00455826e6.blob.core.windows.net/pt-final-posting-files/62-1797829_MEDICAL-CITY-GREEN-OAKS-HOSPITAL_standardcharges.json?si=dpx-pt-json-access-policy&spr=https&sv=2026-02-06&sr=c&sig=ks%2BgfAjyEHlZmeP2PYJ%2f9NpMuCoRStjTb2bhIy9Y6LM%3D",
+    "locations": [
+      "MEDICAL CITY GREEN OAKS HOSPITAL"
+    ],
+    "flags": []
+  },
+  {
+    "id": "82-2073410-medical-city-weatherford-standardcharges-json-0e9b6e",
+    "domain": "medicalcityhealthcare.com",
+    "url": "https://stctrprodsnsvc00455826e6.blob.core.windows.net/pt-final-posting-files/82-2073410_MEDICAL-CITY-WEATHERFORD_standardcharges.json?si=dpx-pt-json-access-policy&spr=https&sv=2026-02-06&sr=c&sig=ks%2BgfAjyEHlZmeP2PYJ%2f9NpMuCoRStjTb2bhIy9Y6LM%3D",
+    "locations": [
+      "MEDICAL CITY WEATHERFORD HOSPITAL"
+    ],
+    "flags": []
+  },
+  {
+    "id": "93-2081386-medical-city-decatur-behavioral-health-standardch-0d582b",
+    "domain": "medicalcityhealthcare.com",
+    "url": "https://stctrprodsnsvc00455826e6.blob.core.windows.net/pt-final-posting-files/93-2081386_Medical-City-Decatur-Behavioral-Health_standardcharges.json?si=dpx-pt-json-access-policy&spr=https&sv=2026-02-06&sr=c&sig=ks%2BgfAjyEHlZmeP2PYJ%2f9NpMuCoRStjTb2bhIy9Y6LM%3D",
+    "locations": [
+      "MEDICAL CITY DECATUR BEHAVIORAL HEALTH"
+    ],
+    "flags": []
+  },
+  {
+    "id": "93-2081386-medical-city-decatur-standardcharges-json-bd7cb4",
+    "domain": "medicalcityhealthcare.com",
+    "url": "https://stctrprodsnsvc00455826e6.blob.core.windows.net/pt-final-posting-files/93-2081386_MEDICAL-CITY-DECATUR_standardcharges.json?si=dpx-pt-json-access-policy&spr=https&sv=2026-02-06&sr=c&sig=ks%2BgfAjyEHlZmeP2PYJ%2f9NpMuCoRStjTb2bhIy9Y6LM%3D",
+    "locations": [
+      "MEDICAL CITY DECATUR HOSPITAL"
+    ],
+    "flags": []
+  },
+  {
+    "id": "fd9b3784b9404a68b16f8b0f18b55b78-18bb9d",
+    "domain": "medicalcityhealthcare.com",
+    "url": "https://www.hcadam.com/api/public/content/fd9b3784b9404a68b16f8b0f18b55b78?download=true",
+    "locations": [
+      "MEDICAL CITY MENTAL HEALTH AND WELLNESS CENTER FRISCO"
+    ],
+    "flags": []
+  },
+  {
+    "id": "dallas-price-transparency-csv-cost-estimates-csv-923e15",
+    "domain": "www.childrens.com",
+    "url": "https://assets.childrens.com/asset/e4699fb1-3c03-422e-b1ee-c8ed4ee1422d/DALLAS-Price-Transparency-CSV-Cost-Estimates.csv",
+    "locations": [
+      "Children's Medical Center of Dallas"
+    ],
+    "flags": []
+  },
+  {
+    "id": "plano-price-transparency-csv-cost-estimates-csv-7a1ece",
+    "domain": "www.childrens.com",
+    "url": "https://assets.childrens.com/asset/bafa64ee-560b-4a68-bab0-41d532a9dd9d/PLANO-Price-Transparency-CSV-Cost-Estimates.csv",
+    "locations": [
+      "Children's Medical Center of Plano"
+    ],
+    "flags": []
+  },
+  {
+    "id": "cookchildrens-2c26e6",
+    "domain": "www.cookchildrens.org",
+    "url": "https://cookchildrens.pt.panaceainc.com/MRFDownload/cookchildrens/cookchildrens",
+    "locations": [
+      "Cook Children's Medical Center"
+    ],
+    "flags": []
+  },
+  {
+    "id": "cookchildrensprosper-0b2b8a",
+    "domain": "www.cookchildrens.org",
+    "url": "https://cookchildrens.pt.panaceainc.com/MRFDownload/cookchildrens/cookchildrensprosper",
+    "locations": [
+      "Cook Children's Medical Center - Prosper"
+    ],
+    "flags": []
+  },
+  {
+    "id": "75-6000439-jps-health-network-standardcharges-csv-19558b",
+    "domain": "www.jpshealthnet.org",
+    "url": "https://www.jpshealthnet.org/price-transparency/75-6000439_jps-health-network_standardcharges.csv",
+    "locations": [
+      "JPS Health Network",
+      "Trinity Spring North"
+    ],
+    "flags": [
+      "shared-by-2-locations"
+    ]
+  },
+  {
+    "id": "750800661-methodistcelinamedicalcenter-standardcharges-zip-6c0c21",
+    "domain": "www.methodisthealthsystem.org",
+    "url": "https://www.methodisthealthsystem.org/sites/default/files/Price%20Transparency/750800661_MethodistCelinaMedicalCenter_standardcharges.zip",
+    "locations": [
+      "Methodist Celina Medical Center"
+    ],
+    "flags": []
+  },
+  {
+    "id": "750800661-methodistcharltonmedicalcenter-standardcharges-zip-489127",
+    "domain": "www.methodisthealthsystem.org",
+    "url": "https://www.methodisthealthsystem.org/sites/default/files/Price%20Transparency/750800661_MethodistCharltonMedicalCenter_standardcharges.zip",
+    "locations": [
+      "Methodist Charlton Medical Center"
+    ],
+    "flags": []
+  },
+  {
+    "id": "750800661-methodistdallasmedicalcenter-standardcharges-zip-a696c8",
+    "domain": "www.methodisthealthsystem.org",
+    "url": "https://www.methodisthealthsystem.org/sites/default/files/Price%20Transparency/750800661_MethodistDallasMedicalCenter_standardcharges.zip",
+    "locations": [
+      "Methodist Dallas Medical Center"
+    ],
+    "flags": []
+  },
+  {
+    "id": "750800661-methodistlegacyerandurgentcare-standardcharges-zip-39d03f",
+    "domain": "www.methodisthealthsystem.org",
+    "url": "http://www.methodisthealthsystem.org/sites/default/files/Price%20Transparency/750800661_MethodistLegacyERandUrgentCare_standardcharges.zip",
+    "locations": [
+      "Methodist Legacy ER and Urgent Care"
+    ],
+    "flags": []
+  },
+  {
+    "id": "750800661-methodistmansfieldmedicalcenter-standardcharges-zi-d5f5cf",
+    "domain": "www.methodisthealthsystem.org",
+    "url": "https://www.methodisthealthsystem.org/sites/default/files/Price%20Transparency/750800661_MethodistMansfieldMedicalCenter_standardcharges.zip",
+    "locations": [
+      "Methodist Mansfield Medical Center"
+    ],
+    "flags": []
+  },
+  {
+    "id": "750800661-methodistmidlothianmedicalcenter-standardcharges-z-874828",
+    "domain": "www.methodisthealthsystem.org",
+    "url": "https://www.methodisthealthsystem.org/sites/default/files/Price%20Transparency/750800661_MethodistMidlothianMedicalCenter_standardcharges.zip",
+    "locations": [
+      "Methodist Midlothian Medical Center"
+    ],
+    "flags": []
+  },
+  {
+    "id": "750800661-methodistrichardsoncampusforcontinuingcare-standar-5913f8",
+    "domain": "www.methodisthealthsystem.org",
+    "url": "https://www.methodisthealthsystem.org/sites/default/files/Price%20Transparency/750800661_MethodistRichardsonCampusForContinuingCare_standardcharges.zip",
+    "locations": [
+      "Methodist Richardson Medical Center Campus for Continuing Care"
+    ],
+    "flags": []
+  },
+  {
+    "id": "750800661-methodistrichardsonmedicalcenter-standardcharges-z-f6e91d",
+    "domain": "www.methodisthealthsystem.org",
+    "url": "https://www.methodisthealthsystem.org/sites/default/files/Price%20Transparency/750800661_MethodistRichardsonMedicalCenter_standardcharges.zip",
+    "locations": [
+      "Methodist Richardson Medical Center"
+    ],
+    "flags": []
+  },
+  {
+    "id": "750800661-methodistsouthlakemedicalcenter-standardcharges-zi-99ec77",
+    "domain": "www.methodisthealthsystem.org",
+    "url": "https://www.methodisthealthsystem.org/sites/default/files/Price%20Transparency/750800661_MethodistSouthlakeMedicalCenter_standardcharges.zip",
+    "locations": [
+      "Methodist Southlake Medical Center"
+    ],
+    "flags": []
+  },
+  {
+    "id": "756004221-parkland-health-standardcharges-csv-10162026-zip-fc4ab8",
+    "domain": "www.parklandhealth.org",
+    "url": "https://www.parklandhealth.org/Uploads/Public/Documents/PDFs/Reports-Discolures/2026/price%20transparency/756004221_parkland-health_standardcharges.csv_10162026.zip",
+    "locations": [
+      "Parkland Health"
+    ],
+    "flags": []
+  },
+  {
+    "id": "020555370-southlake-specialty-hospital-llc-standardcharges-c-d5b743",
+    "domain": "www.texashealth.org",
+    "url": "https://thrpricetransparency01.blob.core.windows.net/mrf/020555370_southlake-specialty-hospital-llc_standardcharges.csv",
+    "locations": [
+      "Texas Health Harris Methodist Hospital Southlake"
+    ],
+    "flags": []
+  },
+  {
+    "id": "202848116-rockwall-regional-hospital-llc-standardcharges-csv-b36577",
+    "domain": "www.texashealth.org",
+    "url": "https://thrpricetransparency01.blob.core.windows.net/mrf/202848116_rockwall-regional-hospital-llc_standardcharges.csv",
+    "locations": [
+      "Texas Health Hospital Rockwall"
+    ],
+    "flags": []
+  },
+  {
+    "id": "203003947-amh-cath-labs-llc-standardcharges-csv-20c088",
+    "domain": "www.texashealth.org",
+    "url": "https://thrpricetransparency01.blob.core.windows.net/mrf/203003947_amh-cath-labs-llc_standardcharges.csv",
+    "locations": [
+      "Texas Health Heart & Vascular Hospital Arlington"
+    ],
+    "flags": []
+  },
+  {
+    "id": "260684968-flower-mound-hospital-partners-llc-standardcharges-05b37b",
+    "domain": "www.texashealth.org",
+    "url": "https://thrpricetransparency01.blob.core.windows.net/mrf/260684968_flower-mound-hospital-partners-llc_standardcharges.csv",
+    "locations": [
+      "Texas Health Presbyterian Hospital Flower Mound"
+    ],
+    "flags": []
+  },
+  {
+    "id": "432008974-texas-health-presbyterian-hospital-denton-standard-410d66",
+    "domain": "www.texashealth.org",
+    "url": "https://thrpricetransparency01.blob.core.windows.net/mrf/432008974_texas-health-presbyterian-hospital-denton_standardcharges.csv",
+    "locations": [
+      "Texas Health Presbyterian Hospital Denton"
+    ],
+    "flags": []
+  },
+  {
+    "id": "451502252-texas-health-harris-methodist-hospital-alliance-st-b104e6",
+    "domain": "www.texashealth.org",
+    "url": "https://thrpricetransparency01.blob.core.windows.net/mrf/451502252_texas-health-harris-methodist-hospital-alliance_standardcharges.csv",
+    "locations": [
+      "Texas Health Harris Methodist Hospital Alliance"
+    ],
+    "flags": []
+  },
+  {
+    "id": "481281376-physicians-medical-center-llc-standardcharges-csv-912109",
+    "domain": "www.texashealth.org",
+    "url": "https://thrpricetransparency01.blob.core.windows.net/mrf/481281376_physicians-medical-center-llc_standardcharges.csv",
+    "locations": [
+      "Texas Health Center for Diagnostics and Surgery Plano"
+    ],
+    "flags": []
+  },
+  {
+    "id": "750972805-texas-health-arlington-memorial-hospital-standardc-269d8e",
+    "domain": "www.texashealth.org",
+    "url": "https://thrpricetransparency01.blob.core.windows.net/mrf/750972805_texas-health-arlington-memorial-hospital_standardcharges.csv",
+    "locations": [
+      "Texas Health Arlington Memorial Hospital"
+    ],
+    "flags": []
+  },
+  {
+    "id": "751047527-texas-health-presbyterian-hospital-dallas-standard-f0818d",
+    "domain": "www.texashealth.org",
+    "url": "https://thrpricetransparency01.blob.core.windows.net/mrf/751047527_texas-health-presbyterian-hospital-dallas_standardcharges.csv",
+    "locations": [
+      "Texas Health Presbyterian Hospital Dallas"
+    ],
+    "flags": []
+  },
+  {
+    "id": "751438726-1104845015-texas-health-harris-methodist-hospital--5b058b",
+    "domain": "www.texashealth.org",
+    "url": "https://thrpricetransparency01.blob.core.windows.net/mrf/751438726-1104845015_texas-health-harris-methodist-hospital-hurst-euless-bedford_standardcharges.csv",
+    "locations": [
+      "Texas Health Harris Methodist Hospital Hurst-Euless-Bedford"
+    ],
+    "flags": []
+  },
+  {
+    "id": "751438726-1306870399-texas-health-harris-methodist-hospital--001b24",
+    "domain": "www.texashealth.org",
+    "url": "https://thrpricetransparency01.blob.core.windows.net/mrf/751438726-1306870399_texas-health-harris-methodist-hospital-hursteulessbedford_standardcharges.csv",
+    "locations": [
+      "Texas Health Springwood Hospital Hurst-Euless-Bedford"
+    ],
+    "flags": []
+  },
+  {
+    "id": "751648589-texas-health-specialty-hospital-fort-worth-standar-d4a39e",
+    "domain": "www.texashealth.org",
+    "url": "https://thrpricetransparency01.blob.core.windows.net/mrf/751648589_texas-health-specialty-hospital-fort-worth_standardcharges.csv",
+    "locations": [
+      "Texas Health Specialty Hospital Fort Worth"
+    ],
+    "flags": []
+  },
+  {
+    "id": "751748586-texas-health-harris-methodist-hospital-azle-standa-dd11a9",
+    "domain": "www.texashealth.org",
+    "url": "https://thrpricetransparency01.blob.core.windows.net/mrf/751748586_texas-health-harris-methodist-hospital-azle_standardcharges.csv",
+    "locations": [
+      "Texas Health Harris Methodist Hospital Azle"
+    ],
+    "flags": []
+  },
+  {
+    "id": "751752253-texas-health-harris-methodist-hospital-stephenvill-63b749",
+    "domain": "www.texashealth.org",
+    "url": "https://thrpricetransparency01.blob.core.windows.net/mrf/751752253_texas-health-harris-methodist-hospital-stephenville_standardcharges.csv",
+    "locations": [
+      "Texas Health Harris Methodist Hospital Stephenville"
+    ],
+    "flags": []
+  },
+  {
+    "id": "751977850-texas-health-harris-methodist-hospital-cleburne-st-6b5469",
+    "domain": "www.texashealth.org",
+    "url": "https://thrpricetransparency01.blob.core.windows.net/mrf/751977850_texas-health-harris-methodist-hospital-cleburne_standardcharges.csv",
+    "locations": [
+      "Texas Health Harris Methodist Hospital Cleburne"
+    ],
+    "flags": []
+  },
+  {
+    "id": "752678857-texas-health-harris-methodist-hospital-southwest-f-7c3cc6",
+    "domain": "www.texashealth.org",
+    "url": "https://thrpricetransparency01.blob.core.windows.net/mrf/752678857_texas-health-harris-methodist-hospital-southwest-fort-worth_standardcharges.csv",
+    "locations": [
+      "Texas Health Harris Methodist Hospital Southwest Fort Worth",
+      "Texas Health Hospital Clearfork"
+    ],
+    "flags": [
+      "shared-by-2-locations"
+    ]
+  },
+  {
+    "id": "752770738-1730245135-texas-health-presbyterian-hospital-plan-ed3a58",
+    "domain": "www.texashealth.org",
+    "url": "https://thrpricetransparency01.blob.core.windows.net/mrf/752770738-1730245135_texas-health-presbyterian-hospital-plano_standardcharges.csv",
+    "locations": [
+      "Texas Health Seay Behavioral Health Center Plano"
+    ],
+    "flags": []
+  },
+  {
+    "id": "752770738-1770514077-texas-health-presbyterian-hospital-plan-700de7",
+    "domain": "www.texashealth.org",
+    "url": "https://thrpricetransparency01.blob.core.windows.net/mrf/752770738-1770514077_texas-health-presbyterian-hospital-plano_standardcharges.csv",
+    "locations": [
+      "Texas Health Presbyterian Hospital Plano"
+    ],
+    "flags": []
+  },
+  {
+    "id": "752771437-texas-health-presbyterian-hospital-kaufman-standar-3d5ed6",
+    "domain": "www.texashealth.org",
+    "url": "https://thrpricetransparency01.blob.core.windows.net/mrf/752771437_texas-health-presbyterian-hospital-kaufman_standardcharges.csv",
+    "locations": [
+      "Texas Health Presbyterian Hospital Kaufman"
+    ],
+    "flags": []
+  },
+  {
+    "id": "752890358-texas-health-presbyterian-hospital-allen-standardc-3101f1",
+    "domain": "www.texashealth.org",
+    "url": "https://thrpricetransparency01.blob.core.windows.net/mrf/752890358_texas-health-presbyterian-hospital-allen_standardcharges.csv",
+    "locations": [
+      "Texas Health Presbyterian Hospital Allen"
+    ],
+    "flags": []
+  },
+  {
+    "id": "756001743-texas-health-harris-methodist-hospital-fort-worth--ff3221",
+    "domain": "www.texashealth.org",
+    "url": "https://thrpricetransparency01.blob.core.windows.net/mrf/756001743_texas-health-harris-methodist-hospital-fort-worth_standardcharges.csv",
+    "locations": [
+      "Texas Health Harris Methodist Hospital Fort Worth"
+    ],
+    "flags": []
+  },
+  {
+    "id": "831954982-texas-health-hospital-frisco-standardcharges-csv-69e3ef",
+    "domain": "www.texashealth.org",
+    "url": "https://thrpricetransparency01.blob.core.windows.net/mrf/831954982_texas-health-hospital-frisco_standardcharges.csv",
+    "locations": [
+      "Texas Health Hospital Frisco"
+    ],
+    "flags": []
+  },
+  {
+    "id": "753175630-the-university-of-texas-southwestern-medical-cente-7c0ab6",
+    "domain": "www.utsouthwestern.edu",
+    "url": "https://sthpiprd.blob.core.windows.net/machine-readable-files/10906/753175630_the-university-of-texas-southwestern-medical-center-at-dallas_standardcharges.csv",
+    "locations": [
+      "William P Clements Jr University Hospital"
+    ],
+    "flags": [
+      "mrf-url-in-wrong-field"
+    ]
+  }
+]

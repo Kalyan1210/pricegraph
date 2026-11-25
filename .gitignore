@@ -1,0 +1,10 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+data/cache/
+data/*.duckdb
+data/*.duckdb.wal
+.DS_Store
+data/events.jsonl
+data/server.log

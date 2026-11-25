@@ -1,0 +1,21 @@
+{
+  "fingerprint": "json-f2941acb08",
+  "kind": "json",
+  "written_for": "62-1682203-medical-city-plano-standardcharges-json-1a602d",
+  "turns": 5,
+  "cost_usd": 0.007702,
+  "stats": {
+    "rows": 174,
+    "code_types": {
+      "RC": 108,
+      "APC": 9,
+      "CPT": 102,
+      "MS-DRG": 26,
+      "HCPCS": 33,
+      "CDM": 23,
+      "APR-DRG": 4
+    },
+    "with_negotiated": 173,
+    "payers": 19
+  }
+}
